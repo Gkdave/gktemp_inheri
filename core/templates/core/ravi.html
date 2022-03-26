@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %} {% load static %} {% block title %}
+<h1> Ravi Dave s/o {{block.super}}</h1>{% endblock title %}{% block content %}
+<th scope="col">Physics</th>
+<th scope="col">Chemistry</th>
+<th scope="col">Maths</th>
+<th scope="col">Total</th>{% endblock content %} {% block content1 %}
+<th scope="row">Marks obtain </th>
+<td>{{hin}}</td>
+<td>{{eng}}</td>
+<td>{{phy}}</td>
+<td>{{che}}</td>
+<td>{{mat}}</td>
+<td>{{total}}</td>
+{% endblock content1 %}

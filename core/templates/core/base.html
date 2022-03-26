@@ -1,0 +1,144 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro"> -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Satisfy&display=swap">
+    <link rel="stylesheet" href="{% static  'core/css/style11.css' %}">
+    <h1 class="text-center">Indian secondary education (INDIA)</h1>
+
+</head>
+
+<body>
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'sonika' %}">Sonika</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'rashmi' %}">Rashmi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'himanshu' %}">Himanshu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'ravi' %}">Ravi</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid bg-dark mt-4 ">
+        <div class="row">
+            <div class="col-sm-5  text-center mt-4 ">
+
+
+                <tr>
+                    {% block title %} sh.Gajendra kumar Dave
+                    <tr>
+                        Adress- janamedi Banswara (Raj) 327001
+                    </tr>
+                    {% endblock title %}
+                </tr>
+
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-sm-4 off-set-1 ">
+                {% block image %} {% endblock image %}
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="text-center text-color:white border-warning border-bottom mt-3">
+
+        <h1> Mark-sheet</h1>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+
+        </div>
+        <div class="col-sm-6">
+            <table class="table text-white">
+                <thead>
+                    <tr>
+                        <th scope="col">Marks</th>
+                        <th scope="col">Hindi</th>
+                        <th scope="col">English</th>
+                        {% block content %}
+                        <th scope="col">Sociology</th>
+                        <th scope="col">Sanscrit</th>
+                        <th scope="col">Economix</th>
+                        <th scope="col">Total</th> {% endblock content %}
+
+                    </tr>
+                    <tr>
+                        <th scope="col">Max marks</th>
+                        <th scope="col">100</th>
+                        <th scope="col">100</th>
+
+                        <th scope="col">100</th>
+                        <th scope="col">100</th>
+                        <th scope="col">100</th>
+                        <th scope="col">500</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        {% block content1 %}
+                        <th scope="col">marks obtain </th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        {% endblock content1 %}
+
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+        <div class="col-sm-3">
+
+        </div>
+    </div>
+    <script src="{% static 'core/js/jquary.min.js' %} "></script>
+    <script src="{% static 'core/js/popper.min.js' %}"></script>
+    <script src="{% static 'core/js/all.min.js' %}"></script>
+    <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+
+
+</body>
+
+</html>
