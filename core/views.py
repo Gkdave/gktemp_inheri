@@ -10,7 +10,7 @@ def sonika(request):
     totals={'total':tl}
     def result(tl):
         if tl > 300 : 
-            return 'first'     
+            return 'first '   
             
  
         elif tl >250:
@@ -22,15 +22,16 @@ def sonika(request):
         else:
             return  'Fail'
     a=result(tl)
-    tl=str(tl)
+    
  
-    res = {tl:a}  
+    # res = {tl:a}  
      
     
-    sona=datas|totals|res   
-    print(sona)
+    # sona=datas|totals  
+    # print(sona)
+    # sona_s={'sona':'data'},'res':{'tl':a}}
     
-    # sona={'datas':{'hin':75,'eng':73,'san':67,'eco':78,'soc':88},'totals':{'total':tl}}    
+    sona={'datas':{'hin':75,'eng':73,'san':67,'eco':78,'soc':88},'totals':{'total':tl},'res':{'tl':a}}    
     # totals={'total':tl}
     return render(request,'core/sonika.html',sona)
      
