@@ -5,17 +5,37 @@ def sonika(request):
 
     datas={'hin':75,'eng':73,'san':67,'eco':78,'soc':88}
     tl= sum(datas.values())
-    # print(tl)
+    print(tl)
+    # 
     totals={'total':tl}
-    sona=datas|totals    
-    # print(sona)
+    def result(tl):
+        if tl > 300 : 
+            return 'first'     
+            
+ 
+        elif tl >250:
+            return 'second'
+            
+        elif tl > 230:
+            return 'third'
+            
+        else:
+            return  'Fail'
+    a=result(tl)
+    tl=str(tl)
+ 
+    res = {tl:a}  
+     
+    
+    sona=datas|totals|res   
+    print(sona)
     
     # sona={'datas':{'hin':75,'eng':73,'san':67,'eco':78,'soc':88},'totals':{'total':tl}}    
     # totals={'total':tl}
     return render(request,'core/sonika.html',sona)
      
 def rashmi(request):
-    datar={"hin":75,'eng':68,'phy':6,'che':78,'mat':69}
+    datar={"hin":75,'eng':68,'phy':69,'che':78,'mat':69}
     tl=sum(datar.values())
     # rashmi={'datar':{"hin":75,'eng':68,'phy':67,'che':78,'mat':69},'totalr':{'total':tl}}
     totalr={'total':tl}
@@ -34,7 +54,9 @@ def ravi(request):
     totalrd={'total':tl}
     rd=datard|totalrd 
     # rd={'datard':{"hin":75,'eng':67,'phy':68,'che':78,'mat':89},'totalrd':{'total':tl}} 
-    return render(request,'core/ravi.html',rd)  
+    return render(request,'core/ravi.html',rd) 
+def result(request):
+    pass 
 
  # tl=sum(data.values())
     # print(tl)
@@ -48,3 +70,4 @@ def ravi(request):
 # d2={'c':43,'d':42}         
 # d3 = d1 | d2
     # print(3)
+
