@@ -24,12 +24,12 @@ def sonika(request):
     a=result(tl)
     
  
-    # res = {tl:a}  
+    # res = {a:tl}   
      
     
-    # sona=datas|totals  
+    # sona=datas|totals |res 
     # print(sona)
-    # sona_s={'sona':'data'},'res':{'tl':a}}
+    # sonas={'sona':'data'},'res':{a:tl}}
     
     sona={'datas':{'hin':75,'eng':73,'san':67,'eco':78,'soc':88},'totals':{'total':tl},'res':{'tl':a}}    
     # totals={'total':tl}
