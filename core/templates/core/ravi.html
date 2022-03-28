@@ -1,16 +1,16 @@
 {% extends 'core/base.html' %} {% load static %} {% block title %}
-<h1> Ravi Dave s/o {{block.super}}</h1>{% endblock title %}{% block content %}
+<h1> Ravi Dave s/o {{block.super}}</h1>{% endblock title %}{% block image %} <img src="{%  static 'core\images\ravi2.jpg' %}" alt="ravi"> {% endblock image %}{% block content %}
 <th scope="col">Physics</th>
 <th scope="col">Chemistry</th>
 <th scope="col">Maths</th>
 <th scope="col">Total</th>
 <th scope="col">Division</th>{% endblock content %} {% block content1 %}
 <th scope="row">Marks obtain </th>
-<td>{{hin}}</td>
-<td>{{eng}}</td>
-<td>{{phy}}</td>
-<td>{{che}}</td>
-<td>{{mat}}</td>
-<td>{{total}}</td>
-<td>{{a}}</td>
+<td>{{datard.hin}}</td>
+<td>{{datard.eng}}</td>
+<td>{{datard.phy}}</td>
+<td>{{datard.che}}</td>
+<td>{{datard.mat}}</td>
+<td>{{totalrd.total}}</td>
+<td>{{res.tl}}</td>
 {% endblock content1 %}

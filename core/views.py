@@ -36,18 +36,51 @@ def sonika(request):
     return render(request,'core/sonika.html',sona)
      
 def rashmi(request):
-    datar={"hin":75,'eng':68,'phy':69,'che':78,'mat':69}
+    datar={"hin":75,'eng':68,'phy':48,'che':44,'mat':45}
     tl=sum(datar.values())
-    # rashmi={'datar':{"hin":75,'eng':68,'phy':67,'che':78,'mat':69},'totalr':{'total':tl}}
+    
     totalr={'total':tl}
-    rashmi=datar|totalr 
+    def result(tl):
+        if tl > 300 : 
+            return 'first '   
+            
+ 
+        elif tl >250:
+            return 'second'
+            
+        elif tl > 230:
+            return 'third'
+            
+        else:
+            return  'Fail'
+    a=result(tl)
+    # rashmir=datar|totalr
+    rashmi={'datar':{"hin":75,'eng':68,'phy':48,'che':44,'mat':45},'totalr':{'total':tl},'res':{'tl':a}} 
     return render(request,'core/rashmi.html',rashmi)
 def himanshu(request):
     datah={"hin":67,'eng':68,'phy':68,'che':89,'mat':88}
     tl=sum(datah.values())
     # hm={'datah':{"hin":67,'eng':68,'phy':69,'che':89,'mat':88},'totalh':{'total':tl}}
     totalh={'total':tl}
-    hm=datah|totalh 
+    # hm=datah|totalh
+    def result(tl):
+        if tl > 300 : 
+            return 'first '   
+            
+ 
+        elif tl >250:
+            return 'second'
+            
+        elif tl > 230:
+            return 'third'
+            
+        else:
+            return  'Fail'
+    a=result(tl)
+
+    hm={'datah':{"hin":67,'eng':68,'phy':69,'che':89,'mat':88},'totalh':{'total':tl},'res':{'tl':a}}
+
+
     return render(request,'core/himanshu.html',hm)
 def ravi(request):
     datard={"hin":75,'eng':67,'phy':68,'che':78,'mat':89}
@@ -55,10 +88,25 @@ def ravi(request):
     totalrd={'total':tl}
     rd=datard|totalrd 
     # rd={'datard':{"hin":75,'eng':67,'phy':68,'che':78,'mat':89},'totalrd':{'total':tl}} 
+    def result(tl):
+        if tl > 300 : 
+            return 'first '   
+            
+ 
+        elif tl >250:
+            return 'second'
+            
+        elif tl > 230:
+            return 'third'
+            
+        else:
+            return  'Fail'
+    a=result(tl)
+    rd={'datard':{"hin":75,'eng':67,'phy':68,'che':78,'mat':89},'totalrd':{'total':tl},'res':{'tl':a}} 
     return render(request,'core/ravi.html',rd) 
 def result(request):
     pass 
-
+# ,
  # tl=sum(data.values())
     # print(tl)
     # # total={'total':tl}
