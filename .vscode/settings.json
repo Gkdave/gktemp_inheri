@@ -3,5 +3,9 @@
         "./F://pythonproject2//davegk",
         "c:\\Users\\Admin\\.vscode\\extensions\\stefanwehr.write-your-python-program-0.16.3\\python\\src\\"
     ],
-    "python.linting.enabled": false
+    "python.linting.enabled": false,
+    "python.analysis.extraPaths": [
+        "./F://pythonproject2//davegk",
+        "c:\\Users\\Admin\\.vscode\\extensions\\stefanwehr.write-your-python-program-0.16.3\\python\\src\\"
+    ]
 }
