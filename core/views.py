@@ -104,6 +104,29 @@ def ravi(request):
     a=result(tl)
     rd={'datard':{"hin":75,'eng':67,'phy':68,'che':78,'mat':89},'totalrd':{'total':tl},'res':{'tl':a}} 
     return render(request,'core/ravi.html',rd) 
+
+def dishu(request):
+    datadd={"hin":75,'eng':67,'phy':68,'che':78,'mat':89}
+    tl=sum(datadd.values())
+    totaldd={'total':tl}
+    dd=datadd|totaldd 
+    # dd={'datadd':{"hin":75,'eng':67,'phy':68,'che':78,'mat':89},'totalrd':{'total':tl}} 
+    def result(tl):
+        if tl > 300 : 
+            return 'first '   
+            
+ 
+        elif tl >250:
+            return 'second'
+            
+        elif tl > 230:
+            return 'third'
+            
+        else:
+            return  'Fail'
+    a=result(tl)
+    dd={'datadd':{"hin":75,'eng':67,'phy':68,'che':78,'mat':89},'totaldd':{'total':tl},'res':{'tl':a}} 
+    return render(request,'core/dishu.html',dd) 
 def result(request):
     pass 
 # ,

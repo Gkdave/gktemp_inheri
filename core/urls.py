@@ -5,4 +5,5 @@ urlpatterns = [
     path('ras/',views.rashmi,name='rashmi'), 
     path('him/',views.himanshu,name='himanshu'), 
     path('ravi/',views.ravi,name='ravi'),  
+    path('dishu/',views.dishu,name='dishu'),  
 ]
